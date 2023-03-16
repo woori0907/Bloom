@@ -1,0 +1,171 @@
+:root{
+    /* Color */
+   --color-white: #ffffff;
+   --color-light-white: #eeeeee;
+   --color-dark-white: #bdbdbd;
+   --color-skyblue: #BDC4FB;
+   --color-dark-skyblue: #99a4ff;
+   --color-dark-grey: #4d4d4d;
+   --color-grey: #616161;
+   --color-light-grey: #7c7979;
+   --color-blue: #73aace;
+   --color-yellow: #fff7d1;
+   --color-orange: #feb546;
+   --color-black: #333;
+ 
+   /* Font size */
+   --font-large: 60px;
+   --font-medium: 28px;
+   --font-regular: 18px;
+   --font-small: 16px;
+   --font-micro: 14px;
+ 
+   /* Font weight */
+   --weight-bold: 700;
+   --weight-semi-bold: 600;
+   --weight-regular: 400;
+ 
+   /* Size */
+   --size-border-radius: 4px;
+ 
+   /* Animation Duration */
+   --animation-duration : 300ms;
+ }
+
+li{
+    list-style-type: none;
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    cursor: default;
+    background-image: url(../img/bg.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1{
+    font-size: var(--font-large);
+    color: var(--color-white);
+    text-shadow: 1px 2px 50px #707070;
+}
+
+/* 메인화면 */
+#welcome input, #nickname input{
+   background-color: transparent;
+   border-color: transparent;
+   border-bottom: 2px solid var(--color-white);  
+   font-size: var(--font-regular);
+   padding: 0.4rem;
+}
+#welcome input:focus, #nickname input:focus{
+    outline: none;
+}
+#welcome button, #nickname button{
+    background-color: var(--color-white);
+    border: none;
+    width: 80px;
+    height: 50px;
+    font-size: var(--font-regular);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: var(--weight-bold);
+    color: var(--color-dark-grey);
+    border-radius: var(--size-border-radius);
+    margin-left: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+/* 채팅화면 */
+#stream-button{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+}
+#mute, #camera{
+    background-color: transparent;
+    color: var(--color-dark-grey);
+    border: none;
+    font-size: var(--font-medium);
+}
+.on{
+    color: var(--color-white);
+}
+#content{
+    display: flex;
+    flex-direction: row;
+}
+
+
+#chat ul{
+    width: 20vw;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 10px;
+    padding: 1em;
+    overflow: scroll;
+}
+#chat li{
+    margin-bottom: 0.5em;
+}
+#chatform{
+    width: 20vw;
+    height: 30px;
+}
+#chat input{
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom: 2px solid var(--color-white);  
+    padding: 0.4rem;
+    width: 80%;
+    height: 100%;
+ }
+ #chat input{
+    outline: none;
+}
+ #chat button{
+    width: 15%;
+    height: 100%;
+    padding: 5px;
+    background-color: var(--color-white);
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: var(--weight-bold);
+    color: var(--color-dark-grey);
+    border-radius: var(--size-border-radius);
+    margin-left: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+ }
+
+
+.message-peer{
+    font-weight: var(--weight-semi-bold);
+    color: #808EBB;
+}
+.message-self{
+    color: var(--color-dark-grey);
+}
+
+#video-wrap{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.video-view{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.video-view video{
+    background-color: var(--color-black);
+}
